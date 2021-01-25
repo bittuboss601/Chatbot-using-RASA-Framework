@@ -1,0 +1,91 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- buy_phone_laptop
+- latest_news_phones_laptops
+- give_information
+- goodbye
+- budget_available
+- user_info
+
+entities:
+- category
+- ram
+- battery
+- camera
+- budget
+- info
+- email
+- contact
+
+slots:
+  category:
+    type: text
+  budget:
+    type: text
+  ram:
+    type: text
+  battery:
+    type: text
+  camera:
+    type: text
+  info:
+    type: text
+  email:
+    type: text
+  contact:
+    type: text
+
+responses:
+  utter_ask_user_name:
+  - text: Please provide us your Name
+  utter_ask_user_email:
+  - text: Please tell us your email address
+  utter_ask_user_contact:
+  - text: Please provide us your contact number
+  utter_how_can_I_help:
+  - text: Welcome, I am your shopping bot. I can help you with finding a phone or laptop and also provide you latest news for them.
+  utter_ask_ram:
+  - text: How much GB RAM, are you looking for ?
+  utter_ask_camera:
+  - text: How much megapixel camera, would be okay for you ?
+  utter_ask_battery:
+  - text: What should be the battery capacity ?
+  utter_ask_budget:
+  - text: What is your budget?
+  utter_wrong_contact:
+  - text: Please enter contact number of 10 digits
+  utter_wrong_budget:
+  - text: Please enter budget in USD and above 4000
+  utter_wrong_ram:
+  - text: Please enter the correct ram value
+  utter_wrong_battery:
+  - text: Please enter the correct value for battery
+  utter_wrong_camera:
+  - text: Please enter the correct value for camera
+  utter_goodbye:
+  - text: It was nice talking to you! Goodbye!
+
+actions:
+- utter_ask_user_name
+- utter_ask_user_email
+- utter_ask_user_contact
+- utter_how_can_I_help
+- utter_ask_ram
+- utter_ask_camera
+- utter_ask_budget
+- utter_wrong_contact
+- utter_wrong_camera
+- utter_wrong_battery
+- utter_wrong_ram
+- utter_wrong_budget
+- utter_ask_battery
+- utter_goodbye
+- action_search
+- action_show_latest_news
+
+forms:
+- product_search_form
